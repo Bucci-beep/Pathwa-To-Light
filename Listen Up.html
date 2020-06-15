@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 40px;
+  background: rgb(176,224,230);
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: rgb(70,130,180);
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 90%;
+  padding: 10%
+
+  
+}
+
+
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 50%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 30px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: rgb(70,130,180);
+  margin-top: 20px;
+}
+#footer .copyright {
+  text-align: center;
+}
+
+.links {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #ccc;
+}
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+}
+.address {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #ccc;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Listen</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Way maker, miracle worker.</h2>
+      <h5>Samuel Njoroge | May 5| 2020</h5>
+      <img src="img/meditate.jpg" style="height:100px;" "width:200px;">
+      
+      <p>Way maker, miracle worker, promise keeper, light in the darkness. My <br>
+      God that is who you are. That is who you are ...</p>
+      <a href="bible reading during corona.html" class="btn tm-btn-gray">Read More</a> 
+    </div>
+    <div class="card">
+      <h2>It is so!</h2>
+      <h5>Sharon Murugi | May 10| 2020</h5>
+      <img src="img/yeah.jpg" style="height:100px;" "width:200px;">
+
+      <p>There is a promise, that points beyond my <br>
+      failures. Even in the worst of my mistakes, there....</p>
+       <a href="have you prayed today.html" class="btn tm-btn-gray">Read More</a> 
+    </div>
+  </div>
+  
+   
+  
+</div>
+<div class="footer">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>UGI & BUCCI</strong>. All Rights Reserved
+          </div>
+            <div class="links">
+            
+             <a href="contact me.html">Contact Me</a> |<a href="Help.html">Help</a> |<a href="Privacy.html">Privacy</a> |
+          </div>
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Imperial
+            -->
+             <a href="https://facebook.com/">Facebook</a> |<a href="https://instagram.com/">Instagram</a> |<a href="https://Twitter.com/">Twitter</a> |
+          </div>
+          <div class="address">
+            
+            <strong>Galana Plaza, Galana Road off Argwings Kodhek, Nairobi </strong>   
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

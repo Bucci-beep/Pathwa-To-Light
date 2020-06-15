@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Imperial Boootstrap Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Imperial
+    Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+  <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Covered By Your Grace' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Coiny' rel='stylesheet'>
+  <style>
+    body {
+  background: #0582CA;
+  color: #666666;
+  font-family: "Open Sans", sans-serif;
+}
+ p{
+      font-size: 16px;
+  letter-spacing: 1px;
+     font-family: 'Caveat';font-size: 22px;
+      
+    }
+    p.italic {
+  font-family: 'Covered By Your Grace';font-size: 32px;
+  }
+a {
+  color: #03C4EB;
+  transition: 0.5s;
+}
+
+a:hover, a:active, a:focus {
+  color: #03c5ec;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* Prelaoder */
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #fff url("../img/preloader.svg") no-repeat center center;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  display: none;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 6px 12px 9px 12px;
+  font-size: 16px;
+  border-radius: 2px;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+}
+
+.back-to-top:focus {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: #03C4EB;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Welcome
+--------------------------------------------------------------*/
+#hero {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/Sam-bg.jpg) top center;
+  background-size: cover;
+}
+#hero.image{
+  background: url(../img/Sam-bg.jpg) top center;
+  background-size: cover;
+}
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+#hero .hero-logo {
+  margin: 20px;
+}
+
+#hero .hero-logo img {
+  max-width: 100%;
+}
+
+#hero .hero-container {
+  background: rgba(0, 0, 0, 0.8);
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#hero h1 {
+  margin: 30px 0 10px 0;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#hero h2 {
+  color: #999;
+  margin-bottom: 50px;
+  font-family: 'Coiny';font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 30px;
+  }
+  #hero h2 .rotating {
+    display: block;
+  }
+}
+
+#hero .rotating > .animated {
+  display: inline-block;
+}
+
+#hero .actions a {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+}
+
+#hero .btn-get-started {
+  background: #03C4EB;
+  border: 2px solid #03C4EB;
+  color: #fff;
+}
+
+#hero .btn-get-started:hover {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-services {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-services:hover {
+  background: #03C4EB;
+  border: 2px solid #03C4EB;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: DodgerBlue;
+  padding: 20px 0;
+  height: 90px;
+}
+
+#header #logo {
+  float: left;
+}
+
+#header #logo h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 6px 0;
+  line-height: 1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header #logo h1 a, #header #logo h1 a:hover {
+  color: #fff;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 50px;
+}
+
+@media (max-width: 768px) {
+  #header {
+    height: 80px;
+  }
+  #header #logo h1 {
+    font-size: 26px;
+  }
+  #header #logo img {
+    max-height: 40px;
+  }
+}
+
+.is-sticky #header {
+  background:DodgerBlue;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Nav Menu Essentials */
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+/* Nav Menu Arrows */
+.sf-arrows .sf-with-ul {
+  padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: "\f107";
+  position: absolute;
+  right: 15px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+/* Nav Meu Container */
+#nav-menu-container {
+  float: right;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  #nav-menu-container {
+    display: none;
+  }
+}
+
+/* Nav Meu Styling */
+.nav-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  outline: none;
+}
+
+.nav-menu a:hover, .nav-menu li:hover > a, .nav-menu .menu-active > a {
+  color: #03C4EB;
+}
+
+.nav-menu ul {
+  margin: 4px 0 0 15px;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.nav-menu ul li {
+  background: #ccc;
+  border-top: 1px solid #f4f4f4;
+}
+
+.nav-menu ul li:first-child {
+  border-top: 0;
+}
+
+.nav-menu ul li:hover {
+  background: #f6f6f6;
+}
+
+.nav-menu ul li a {
+  color: #333;
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+
+/* Mobile Nav Toggle */
+#mobile-nav-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 20px 20px 0 0;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  display: none;
+  transition: all 0.4s;
+  outline: none;
+}
+
+#mobile-nav-toggle i {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #mobile-nav-toggle {
+    display: inline;
+  }
+}
+
+/* Mobile Nav Styling */
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  padding-top: 18px;
+  bottom: 0;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.9);
+  left: -260px;
+  width: 260px;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+
+#mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#mobile-nav ul li {
+  position: relative;
+}
+
+#mobile-nav ul li a {
+  color: #fff;
+  font-size: 16px;
+  overflow: hidden;
+  padding: 10px 22px 10px 15px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+#mobile-nav ul li a:hover {
+  color: #fff;
+}
+
+#mobile-nav ul li li {
+  padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+  color: #03C4EB;
+}
+
+#mobile-nav ul .menu-item-active {
+  color: #03C4EB;
+}
+
+#mobile-body-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+/* Mobile Nav body classes */
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+  left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+  color: #fff;
+}
+
+
+#footer {
+  background: DodgerBlue;
+  padding: 30px 0;
+  color: #fff;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+}
+.links {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #ffffff;
+}
+.address {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #ccc;
+}
+  </style>
+</head>
+
+<body>
+  <!--==========================
+  Header Section
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <a href="#hero"><img src="img/Sam.jpg" alt="" title="" /></img></a>
+        <!-- Uncomment below if you prefer to use a text image -->
+        <!--<h1><a href="#hero">Header 1</a></h1>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          
+          <li class="menu-has-children"><a href="">Menu</a>
+            <ul>
+              <li><a href="Favourite girl.html">About Us</a></li>
+               <li><a href="contact me.html">Contact Me</a></li>
+               <li><a href="Help.html">Help</a></li>
+               <li><a href="Privacy.html">Privacy</a></li>
+              
+            </ul>
+          </li>
+        
+        </ul>
+      </nav>
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+  <!-- #header -->
+
+   
+  <div id="preloader"></div>
+
+  <!--==========================
+  Hero Section
+  ============================-->
+  <section id="hero">
+    <div class="hero-container">
+      <div class="wow fadeIn">
+        
+
+        <h1>Pathway To Light</h1>
+        <h2>Jesus Christ our Lord <span class="rotating">is the light of young people, is the life of young people</span></h2>
+        <div class="actions">
+          <a href="#about" class="btn-get-started">Listen</a>
+          <a href="#services" class="btn-services">Read</a>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!--==========================
+  Header Section
+  ============================-->
+  
+
+  
+  <section id="about">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Welcome</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">"We are alive to the fact that young people around the world have passions fueled by their inquisitiveness of life. However, many of these passions lead young people into a destructive lifestyle which unfortunately ends up with a devastating emptiness because they are disappointed at life for not fulfilling their deepest desires. In light of this, what is needed is sound instruction and the learning of truth that would lead to a purposeful life. However, truth is rear in such a world and that’s why in recognition of this fact, we submit to the truth of God’s word because we believe that it is the truth that is liberating from an empty life. What young people need is to pursue godly living and seek the knowledge of the truth. Young people desperately need to hear the word of truth as they struggle through the intricacies of their formative years.
+With this in mind, we submit to the authority and instruction of the Bible as the living word of God to a man that is sufficient for all godly living. We are guided by the scripture in John 1:4 “In Him was life, and the life was the light of men.” Pathway to Light in its commitment to teaching godly living for young people is committed to teaching scripture by correctly handling the word of truth. We desire to see the young people pursue righteousness, faith, love, and peace, along with those who call on the Lord from a pure heart. Our deep-hearted prayer is that young people come to their senses and escape from the snares of the devil because we understand that these destructive lifestyles are a snare of the devil capturing young people to do his will."
+</p>
+<p class="italic">Samuel Njoroge</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>UGI & BUCCI</strong>. All Rights Reserved
+          </div>
+            <div class="links">
+            
+             <a href="contact me.html">Contact Me</a> |<a href="Help.html">Help</a> |<a href="Privacy.html">Privacy</a>|
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Imperial
+            -->
+             <a href="https://facebook.com/">Facebook</a> |<a href="https://instagram.com/">Instagram</a> |<a href="https://Twitter.com/">Twitter</a> |
+          </div>
+          <div class="address">
+            
+            <strong>Galana Plaza, Galana Road off Argwings Kodhek, Nairobi </strong>   
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Required JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/morphext/morphext.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/stickyjs/sticky.js"></script>
+  <script src="lib/easing/easing.js"></script>
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="js/custom.js"></script>
+
+  <script src="contactform/contactform.js"></script>
+
+
+</body>
+
+</html>

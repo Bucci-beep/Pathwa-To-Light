@@ -1,0 +1,514 @@
+
+</!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="utf-8">
+  <title>Imperial Boootstrap Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+   <!-- =======================================================
+    Theme Name: Imperial
+    Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+	<link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Coiny' rel='stylesheet'>
+	<title>About Us</title>
+	<style>
+			/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: DodgerBlue;
+  padding: 20px 0;
+  height: 90px;
+}
+
+#header #logo {
+  float: left;
+}
+
+#header #logo h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 6px 0;
+  line-height: 1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header #logo h1 a, #header #logo h1 a:hover {
+  color: #fff;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 50px;
+}
+
+@media (max-width: 768px) {
+  #header {
+    height: 80px;
+  }
+  #header #logo h1 {
+    font-size: 26px;
+  }
+  #header #logo img {
+    max-height: 40px;
+  }
+}
+
+.is-sticky #header {
+  background:DodgerBlue;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Nav Menu Essentials */
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+/* Nav Menu Arrows */
+.sf-arrows .sf-with-ul {
+  padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: "\f107";
+  position: absolute;
+  right: 15px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+/* Nav Meu Container */
+#nav-menu-container {
+  float: right;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  #nav-menu-container {
+    display: none;
+  }
+}
+
+/* Nav Meu Styling */
+.nav-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  outline: none;
+}
+
+.nav-menu a:hover, .nav-menu li:hover > a, .nav-menu .menu-active > a {
+  color: #03C4EB;
+}
+
+.nav-menu ul {
+  margin: 4px 0 0 15px;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.nav-menu ul li {
+  background: #ccc;
+  border-top: 1px solid #f4f4f4;
+}
+
+.nav-menu ul li:first-child {
+  border-top: 0;
+}
+
+.nav-menu ul li:hover {
+  background: #f6f6f6;
+}
+
+.nav-menu ul li a {
+  color: #333;
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+
+/* Mobile Nav Toggle */
+#mobile-nav-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 20px 20px 0 0;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  display: none;
+  transition: all 0.4s;
+  outline: none;
+}
+
+#mobile-nav-toggle i {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #mobile-nav-toggle {
+    display: inline;
+  }
+}
+
+/* Mobile Nav Styling */
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  padding-top: 18px;
+  bottom: 0;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.9);
+  left: -260px;
+  width: 260px;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+
+#mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#mobile-nav ul li {
+  position: relative;
+}
+
+#mobile-nav ul li a {
+  color: #fff;
+  font-size: 16px;
+  overflow: hidden;
+  padding: 10px 22px 10px 15px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+#mobile-nav ul li a:hover {
+  color: #fff;
+}
+
+#mobile-nav ul li li {
+  padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+  color: #03C4EB;
+}
+
+#mobile-nav ul .menu-item-active {
+  color: #03C4EB;
+}
+
+#mobile-body-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+/* Mobile Nav body classes */
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+  left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+  color: #fff;
+}
+
+		body{
+			background-color: #25CED1;
+			font-family: 'Caveat';font-size: 22px;
+		}
+		h1{
+			text-align: center;
+			font-family: 'Coiny';font-size: 52px;
+      padding-top: 20px;
+		}
+		section {
+			margin: 20px;
+			background-color: #FFFFFF;
+      padding-top: 10px;
+			margin-bottom: 10px;
+		}
+		h2{
+			text-align: center;
+			font-family: 'Coiny';font-size: 22px;
+		}
+		p{
+			margin: 20px;
+			padding-bottom: 10px;
+		}
+	
+#footer {
+  background: DodgerBlue;
+  padding: 30px 0;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+}
+.links {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #ffffff;
+}
+.address {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #ccc;
+}
+	</style>
+</head>
+<body>
+
+	<header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <a href="#hero"><img src="img/Sam.jpg" alt="" title="" /></img></a>
+        <!-- Uncomment below if you prefer to use a text image -->
+        <!--<h1><a href="#hero">Header 1</a></h1>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          
+          <li class="menu-has-children"><a href="">Menu</a>
+            <ul>
+               <li><a href="Favourite girl.html">About Us</a></li>
+               <li><a href="contact me.html">Contact Me</a></li>
+               <li><a href="Help.html">Help</a></li>
+               <li><a href="Privacy.html">Privacy</a></li>
+              
+            </ul>
+          </li>
+        
+        </ul>
+      </nav>
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+  <!-- #header -->
+
+	<h1>ABOUT US</h1>
+<section mission>
+  <h2>Mission</h2>
+  <p>The primary mission of <strong>Pathway to Light</strong> is to reach out to young people with Biblical truth in the hope of pointing them to the Light 
+  who is Jesus Christ. <br>We endeavor to influence the young people with the Gospel of our Lord Jesus Christ.<br> The chief aim is that through the presentation 
+  of the Gospel as a sufficient tool for all of life, that their choices in life are not influenced by the evil that surrounds them but with the truth
+  of the gospel.<br> Therefore, our prayer is that the young people are equipped with God’s word, and by God’s grace <strong>Pathway to Light</strong> will do
+  it with complete patience and the sound teaching of doctrine.</p>
+</section>
+
+<section vision>
+  <h2>Vision</h2>
+  <p>Our vision is to raise a generation of young people that are acquainted with Scripture, which makes one wise for salvation through faith in
+  Jesus Christ as scripture expresses in 2 Timothy 3:15. <br> We aim at building a team that reaches out to the young people through evangelism, training,
+  and discussions all for the glory of our Lord Jesus Christ.</p>
+</section>
+
+<section statement of faith>
+  <h2>Statement of Faith</h2>
+  <p> The statements below speak the heart of our convictions as it concerns our faith:</p>
+</section>
+
+<section a>
+  <h2>a) The Holy Scriptures</h2>
+  <p>We believe and teach that the Holy Scriptures which constitute the entire sixty-six books of the Bible are sufficient, infallible, and inerrant as the <br>
+  original manuscripts were inspired equally in all parts by the Holy Spirit. We believe that the Bible is divinely revealed and is the authoritative word of
+  God to which we are all called to faithfully submit.</p>
+</section>
+
+<section b>
+  <h2>b)  The Trinity and God the Father</h2>
+  <p>We believe and teach that there is only one living and true God whose being is spirit. We affirm that He is eternal, infinite, all-knowing, unchangeable<br>
+  in His being, and is perfect in all His attributes.<br> We also believe that He exists eternally in three distinct yet fully divine persons; the Father,
+  the Son, and the Holy Spirit.<br> The three persons are the same in substance, true, and eternally God in oneness, all equally deserving of worship and 
+  obedience as they are equal in power and glory.</p>
+</section>
+
+<section c>
+  <h2>c) Jesus Christ (God the Son)</h2>
+  <p>We believe and teach that Jesus Christ who is the second person of the Trinity, is truly God and truly man in indivisible oneness.<br> We teach that in the incarnation, Jesus accepted humanness becoming the  God-man having been born of the Virgin Mary. In the incarnation, He revealed God to men, acted as their redeemer, and was established as the ruler over God’s kingdom.<br> He lived a sinless life, was crucified, dead, and buried, and on the third day he was raised to life, He ascended into heaven, and will come again in glory and judgment.<br> We teach that at the cross where He shed His blood and offered Himself sacrificially, He accomplished our redemption by acting as our mediator between man and God.</p>
+</section>
+
+<section d>
+  <h2>d) The Holy Spirit</h2>
+  <p>We believe and teach that the Holy Spirit is one in substance with the Father and the Son equal in all perfect attributes expressed both in personality and deity. We recognize His sovereign work in creation, the incarnation, the divine inspiration and revelation of scripture, and the work of salvation.<br> We teach His indwelling in the hearts of men that causes regeneration securing our salvation in Jesus Christ. <br>Further, that He performs sanctification, instruction, and empowerment of the believer in the workmanship of God’s vineyard. </p>
+</section>
+
+<section e>
+  <h2>e) Creation</h2>
+  <p>We believe and teach that the Holy Spirit is one in substance with the Father and the Son equal in all perfect attributes expressed both in personality and deity. We recognize His sovereign work in creation,   <br> the incarnation, the divine inspiration and revelation of scripture, and the work of salvation. We teach His indwelling in the hearts of men that causes regeneration securing our salvation in Jesus Christ. <br> Further, that He performs sanctification, instruction, and empowerment of the believer in the workmanship of God’s vineyard.</p>
+</section>
+
+<section f>
+  <h2>f)  Man</h2>
+  <p> We teach and believe that after God created the heavens and the earth, and the other creatures, He proceeded to create man, both male, and female, in His image and likeness. When God created man, he was created sinless and His moral responsibility was to God.<br> God’s intention was that man should glorify God and enjoy His fellowship but Adam who was the first man sinned and woefully fell in his responsibility. Because of this, all men became corrupted by Adam’s sin for all men were in Adam except Jesus Christ. <br> Man in his fall lost his innocence and incurred the penalty of both physical and spiritual death and by that became deserving of God’s wrath. The man was corrupted, and he morally <br>became incapable of choosing what was acceptable to God, and apart from God’s divine grace, the man forever is estranged to Him. Man has no power whatsoever to recover himself and is hopelessly lost. <br> Therefore, we affirm that salvation is entirely God’s work as an act of His grace through the redemptive work of our Lord Jesus Christ.</p>
+</section>
+
+<footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>UGI & BUCCI</strong>. All Rights Reserved
+          </div>
+            <div class="links">
+            
+             <a href="contact me.html">Contact Me</a> |<a href="Help.html">Help</a> |<a href="Privacy.html">Privacy</a>|
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Imperial
+            -->
+             <a href="https://facebook.com/">Facebook</a> |<a href="https://instagram.com/">Instagram</a> |<a href="https://Twitter.com/">Twitter</a> |
+          </div>
+          <div class="address">
+            
+            <strong>Galana Plaza, Galana Road off Argwings Kodhek, Nairobi </strong>   
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Required JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/morphext/morphext.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/stickyjs/sticky.js"></script>
+  <script src="lib/easing/easing.js"></script>
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="js/custom.js"></script>
+
+  <script src="contactform/contactform.js"></script>
+</body>
+</html>
