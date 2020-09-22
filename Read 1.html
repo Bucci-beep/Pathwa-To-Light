@@ -13,1086 +13,250 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="responsive.css">
-	<style>
-	@font-face {
-    font-family: Geometria;
-    src: url(geometria_font/Geometria.ttf);
-    font-weight: 300;
-}
 
-@font-face {
-    font-family: Geometria;
-    src: url(geometria_font/Geometria-Bold.ttf);
-    font-weight: 700;
-}
 
-@font-face {
-    font-family: Geometria;
-    src: url(geometria_font/Geometria-ExtraBold.ttf);
-    font-weight: 800;
-}
-
-@font-face {
-    font-family: Geometria;
-    src: url(geometria_font/geometria-light.ttf);
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: Geometria;
-    src: url(geometria_font/geometria-medium.ttf);
-    font-weight: 500;
-}
-
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-#header {
-  background: DodgerBlue;
-  padding: 20px 0;
-  height: 90px;
-}
-
-#header #logo {
-  float: left;
-}
-
-#header #logo h1 {
-  font-size: 36px;
-  margin: 0;
-  padding: 6px 0;
-  line-height: 1;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-#header #logo h1 a, #header #logo h1 a:hover {
-  color: DodgerBlue;
-}
-
-#header #logo img {
-  padding: 0;
-  margin: 0;
-  max-height: 50px;
-}
-
-@media (max-width: 768px) {
-  #header {
-    height: 80px;
-  }
-  #header #logo h1 {
-    font-size: 26px;
-  }
-  #header #logo img {
-    max-height: 40px;
-  }
-}
-
-.is-sticky #header {
-  background:DodgerBlue;
-}
-
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/* Nav Menu Essentials */
-.nav-menu, .nav-menu * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.nav-menu ul {
-  position: absolute;
-  display: none;
-  top: 100%;
-  left: 0;
-  z-index: 99;
-}
-
-.nav-menu li {
-  position: relative;
-  white-space: nowrap;
-}
-
-.nav-menu > li {
-  float: left;
-}
-
-.nav-menu li:hover > ul,
-.nav-menu li.sfHover > ul {
-  display: block;
-}
-
-.nav-menu ul ul {
-  top: 0;
-  left: 100%;
-}
-
-.nav-menu ul li {
-  min-width: 180px;
-}
-
-/* Nav Menu Arrows */
-.sf-arrows .sf-with-ul {
-  padding-right: 30px;
-}
-
-.sf-arrows .sf-with-ul:after {
-  content: "\f107";
-  position: absolute;
-  right: 15px;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-}
-
-.sf-arrows ul .sf-with-ul:after {
-  content: "\f105";
-}
-
-/* Nav Meu Container */
-#nav-menu-container {
-  float: right;
-  margin: 5px 0;
-}
-
-@media (max-width: 768px) {
-  #nav-menu-container {
-    display: none;
-  }
-}
-
-/* Nav Meu Styling */
-.nav-menu a {
-  padding: 10px 15px;
-  text-decoration: none;
-  display: inline-block;
-  color: #fff;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  outline: none;
-}
-
-.nav-menu a:hover, .nav-menu li:hover > a, .nav-menu .menu-active > a {
-  color: #03C4EB;
-}
-
-.nav-menu ul {
-  margin: 4px 0 0 15px;
-  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
-}
-
-.nav-menu ul li {
-  background: #ccc;
-  border-top: 1px solid #f4f4f4;
-}
-
-.nav-menu ul li:first-child {
-  border-top: 0;
-}
-
-.nav-menu ul li:hover {
-  background: #f6f6f6;
-}
-
-.nav-menu ul li a {
-  color: #333;
-}
-
-.nav-menu ul ul {
-  margin: 0;
-}
-
-/* Mobile Nav Toggle */
-#mobile-nav-toggle {
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 999;
-  margin: 20px 20px 0 0;
-  border: 0;
-  background: none;
-  font-size: 24px;
-  display: none;
-  transition: all 0.4s;
-  outline: none;
-}
-
-#mobile-nav-toggle i {
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  #mobile-nav-toggle {
-    display: inline;
-  }
-}
-
-/* Mobile Nav Styling */
-#mobile-nav {
-  position: fixed;
-  top: 0;
-  padding-top: 18px;
-  bottom: 0;
-  z-index: 998;
-  background: rgba(0, 0, 0, 0.9);
-  left: -260px;
-  width: 260px;
-  overflow-y: auto;
-  transition: 0.4s;
-}
-
-#mobile-nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-#mobile-nav ul li {
-  position: relative;
-}
-
-#mobile-nav ul li a {
-  color: #fff;
-  font-size: 16px;
-  overflow: hidden;
-  padding: 10px 22px 10px 15px;
-  position: relative;
-  text-decoration: none;
-  width: 100%;
-  display: block;
-  outline: none;
-}
-
-#mobile-nav ul li a:hover {
-  color: #fff;
-}
-
-#mobile-nav ul li li {
-  padding-left: 30px;
-}
-
-#mobile-nav ul .menu-has-children i {
-  position: absolute;
-  right: 0;
-  z-index: 99;
-  padding: 15px;
-  cursor: pointer;
-  color: #fff;
-}
-
-#mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #03C4EB;
-}
-
-#mobile-nav ul .menu-item-active {
-  color: #03C4EB;
-}
-
-#mobile-body-overly {
-  width: 100%;
-  height: 100%;
-  z-index: 997;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.6);
-  display: none;
-}
-
-/* Mobile Nav body classes */
-body.mobile-nav-active {
-  overflow: hidden;
-}
-
-body.mobile-nav-active #mobile-nav {
-  left: 0;
-}
-
-body.mobile-nav-active #mobile-nav-toggle {
-  color: #fff;
-}
-
-.read{
-  text-align: center;
-   font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  font-size: 50px;
-  letter-spacing: 1px;
-  border-top: 10px;
-  border-bottom: 10px;
-}
-
-section.blog-post-area {
-    margin-top: 50px;
-    background-color: #22AED1;
-}
-
-section.blog-post-area .big-image {
-    float: left;
-    width: 50%;
-    padding-right: 35px;
-}
-
-section.blog-post-area .big-text {
-    float: right;
-    width: 50%;
-    padding-right: 20px;
-}
-
-section.blog-post-area img {
-    width: 100%;
-}
-
-section.blog-post-area .big-text h3 {
-    margin: 10px 0 0;
-}
-
-section.blog-post-area .big-text h3 a {
-    font-family: Geometria;
-    font-weight: 700;
-    font-size: 40px;
-    color: #061e37;
-    text-decoration: none;
-}
-
-section.blog-post-area .big-text p {
-    color: #061e37;
-    font-family: Geometria;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
-    padding-top: 18px;
-    text-align: justify;
-    text-decoration: none;
-}
-
-section.blog-post-area .big-text h4 {
-    margin-top: 25px;
-    padding-top: 30px;
-    position: relative;
-}
-
-section.blog-post-area .big-text h4::before {
-    background: #e6e6e6 none repeat scroll 0 0;
-    content: "";
-    height: 1px;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-section.blog-post-area .single-post {
-    padding-right: 20px;
-    margin: 100px 0px 0px;
-}
-
-section.blog-post-area h4 span {
-    font-family: Geometria;
-    font-weight: 400;
-    font-size: 15px;
-    color: #061e37;
-    text-decoration: none;
-}
-
-section.blog-post-area .big-text h4 span.author {
-    float: right
-}
-
-section.blog-post-area h4 span.author-name {
-    font-weight: 500;
-}
-
-.blog-post-area .single-post h3 a {
-    font-family: Geometria;
-    font-size: 28px;
-    font-weight: 700;
-    text-decoration: none;
-    color: #061e37;
-}
-
-.blog-post-area .single-post p {
-    color: #061e37;
-    font-family: Geometria;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 27px;
-    padding-top: 14px;
-    position: relative;
-    text-align: justify;
-}
-
-.blog-post-area .single-post h4 {
-    margin-bottom: 12px;
-    padding-top: 10px;
-    position: relative;
-}
-
-.blog-post-area .single-post h4::before {
-    background: #e6e6e6 none repeat scroll 0 0;
-    content: "";
-    height: 1px;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.blog-post-area .single-post p::before {
-    background: #e6e6e6 none repeat scroll 0 0;
-    content: "";
-    height: 1px;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.blog-post-area .single-post h3 {
-    margin: 25px 0 15px;
-}
-
-.blog-post-area .pegination {
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
-.blog-post-area .pegination .nav-links {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.blog-post-area .pegination .nav-links .page-numbers {
-    border: 1px solid #448aff;
-    border-radius: 50%;
-    color: #2AF5FF;
-    display: inline-block;
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    height: 45px;
-    line-height: 45px;
-    list-style: outside none none;
-    margin-right: 5px;
-    text-align: center;
-    width: 45px;
-}
-
-.blog-post-area .blog-post-area-style {
-    margin: 0 20px 0 40px;
-}
-
-.blog-post-area .pegination .nav-links .page-numbers.current {
-    background: #448aff;
-    color: #fff;
-}
-
-.blog-post-area .pegination .nav-links .page-numbers:hover {
-    background: #448aff;
-    color: #fff;
-}
-
-.blog-post-area .pegination .nav-links a {
-    text-decoration: none;
-}
-
-/*css for single blog page*/
-
-.single-blog-area {
-    margin-bottom: 100px;
-}
-
-.single-blog-area .border-top {
-    border-top: 1px solid #40c4ff;
-}
-
-.single-blog-area h2 {
-    color: #010101;
-    font-family: Geometria;
-    font-size: 38px;
-    font-weight: 500;
-    margin-bottom: 60px;
-    margin-top: 45px;
-}
-
-.single-blog-area p {
-    font-family: Geometria;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 35px;
-    position: relative;
-    text-align: justify;
-}
-
-.single-blog-area .blog-area-part p {
-    margin-top: 30px;
-}
-
-.single-blog-area .for-style {
-    margin-bottom: 50px;
-}
-
-.single-blog-area .for-style p span {
-    color: #40c4ff;
-    float: left;
-    font-family: Geometria;
-    font-size: 60px;
-    font-weight: 400;
-    margin: 18px 30px 20px 20px;
-    position: relative;
-}
-
-.single-blog-area .for-style p span.drop_caps::before {
-    color: #40c4ff;
-    content: "”";
-    font-size: 40px;
-    left: -20px;
-    position: absolute;
-    top: -7px;
-    font-weight: 500;
-}
-
-.single-blog-area .for-style p span::after {
-    color: #40c4ff;
-    content: "”";
-    font-size: 40px;
-    right: -15px;
-    position: absolute;
-    top: -7px;
-    font-weight: 500;
-}
-
-.single-blog-area h3 {
-    color: #757575;
-    font-family: Geometria;
-    font-size: 38px;
-    font-style: italic;
-    font-weight: 500;
-    line-height: 65px;
-    margin-bottom: 25px;
-    word-spacing: 15px;
-}
-
-.single-blog-area h3 i.fa-quote-left {
-    float: left;
-    font-size: 55px;
-    font-style: italic;
-    margin-right: 20px;
-    margin-top: 10px;
-    color: #eeeeee;
-}
-
-.single-blog-area h3 i.fa-quote-right {
-    display: inline-block;
-    font-size: 55px;
-    font-style: italic;
-    margin-left: 20px;
-    color: #eeeeee;
-}
-
-.single-blog-area .image-one {
-    padding-right: 20px;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.single-blog-area .image-two {
-    width: 100%;
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-.single-blog-area img {
-    width: 100%
-}
-
-.single-blog-area .blog-area {
-    margin-right: 40px;
-}
-
-.single-blog-area .ads-area {
-    border-top: 1px solid #e6e6e6;
-    margin-top: 30px;
-    padding: 50px 0;
-    position: relative;
-}
-
-.single-blog-area .ads-area img {
-    width: 100%;
-    height: 90px;
-    padding: 0 60px;
-}
-
-.single-blog-area .ads-area p {
-    color: #fff;
-    font-family: Geometria;
-    font-size: 33px;
-    font-weight: 500;
-    line-height: 150px;
-    position: absolute;
-    text-align: center;
-    top: 15px;
-    width: 100%;
-}
-
-
-/*comment part start*/
-
-.single-blog-area .commententries h3 {
-    color: #000;
-    font-family: Geometria;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    margin: 0;
-    padding-bottom: 5px;
-    position: relative;
-}
-
-.single-blog-area .commententries h3::before {
-    background: #e6e6e6 none repeat scroll 0 0;
-    content: "";
-    height: 1px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
-
-.single-blog-area .commententries ul {
-    margin: 0;
-    padding: 0;
-}
-
-.single-blog-area .commententries ul ul {
-    margin-left: 60px;
-}
-
-.single-blog-area .commententries ul li article.comment {
-    padding-bottom: 13px;
-    padding-top: 30px;
-    position: relative;
-}
-
-.single-blog-area .commententries ul li article.comment:before {
-    background: #e6e6e6 none repeat scroll 0 0;
-    content: "";
-    height: 1px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
-
-
-}
-.single-blog-area .commententries .author-name h5 a {
-    font-family: Geometria;
-    font-size: 21px;
-    font-weight: 500;
-    text-decoration: none;
-    color: #000;
-}
-.single-blog-area .commententries .author-name h5 a {
-    color: #000;
-    font-family: Geometria;
-    font-size: 21px;
-    font-weight: 500;
-    line-height: 10px;
-    color: #000;
-    text-decoration: none;
-}
-.single-blog-area .commententries .author-name p {
-    color: #000;
-    font-family: Geometria;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 10px;
-    color: #989191
-}
-.single-blog-area .commententries .comment-body p {
-    font-family: Geometria;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 25px;
-    color: #989191
-}
-.single-blog-area .commententries .reply p span {
-    color: #989191;
-    font-family: Geometria;
-    font-size: 18px;
-    font-weight: 500;
-    margin-right: 50px;
-}
-.single-blog-area .commententries .reply p span i {
-    color: #989191;
-    margin-right: 10px;
-}
-.single-blog-area .commententries ul {
-    overflow: hidden;
-}
-.single-blog-area .commententries ul li {
-    list-style: none
-}
-.commententries .comment-author {
-    border-radius: 50%;
-    float: left;
-    height: 55px;
-    width: 55px;
-}
-.commententries .comment-details {
-    margin-left: 70px;
-}
-.single-blog-area form input {
-    border: 1px solid #e6e6e6;
-    margin: 0;
-    padding: 12px 22px;
-    border-radius: 5px;
-    width: 100%
-}
-.single-blog-area form input[placeholder] {
-    color: #000;
-    font-family: Geometria;
-    font-size: 16px;
-    font-weight: 500;
-}
-.single-blog-area form .name {
-    float: left;
-    margin-bottom: 15px;
-    width: 50%;
-}
-.single-blog-area form .email {
-    width: 50%;
-    float: right;
-}
-.single-blog-area form .name input {
-    width: 95%;
-}
-.single-blog-area form .name .name {
-    margin-right: 20px;
-}
-.single-blog-area form .email input {
-    width: 95%;
-}
-.single-blog-area form .comment {
-    margin-right: 150px;
-}
-.single-blog-area form .post {
-    bottom: 0;
-    position: absolute;
-    right: 0;
-}
-.single-blog-area form .post input[type="submit"] {
-    background: #40c4ff none repeat scroll 0 0;
-    bottom: 0;
-    color: #fff;
-    font-family: Geometria;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 14px 38px;
-    right: -150px;
-    text-transform: uppercase;
-    width: auto;
-}
-.single-blog-area form {
-    margin: 50px 0 0;
-    position: relative;
-}
-
-/*comment part end*/
-.grid .portfolio-item {
-    margin-bottom: 30px;
-}
-.grid .portfolio-item img {
-    float: left;
-    height: 72px;
-    width: 72px;
-}
-.single-blog-area .grid .portfolio-item .portfolio-text {
-    margin-left: 110px;
-}
-.single-blog-area .grid .portfolio-item .portfolio-text h5 {
-    margin: 0
-}
-.single-blog-area .grid .portfolio-item .portfolio-text h5 a {
-    color: #000;
-    font-family: Geometria;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 27px;
-    text-decoration: none;
-}
-.single-blog-area .grid .portfolio-item .portfolio-text p {
-    font-family: Geometria;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 20px;
-    color: #b2b2b2;
-}
-.single-blog-area .grid .portfolio-item .portfolio-text p span {
-    margin: 0 10px;
-}
-.single-blog-area .button-group button {
-    border: medium none;
-    border-radius: 0;
-    color: #000;
-    display: inline-block;
-    font-family: Geometria;
-    font-size: 13px;
-    font-weight: 500;
-    margin-right: -2px;
-    padding: 21px;
-    text-transform: uppercase;
-    width: 33%;
-}
-.single-blog-area .button-group {
-    margin: 40px 0;
-}
-.single-blog-area .button-group button.is-checked {
-    background: #40c4ff;
-    color: #fff;
-}
-.single-blog-area .button-group button:hover {
-    background: #40c4ff;
-    color: #fff;
-}
-.single-blog-area .sidebar-ads {
-    width: 300px;
-    position: relative;
-}
-.single-blog-area .sidebar-ads p {
-    color: #fff;
-    font-family: Geometria;
-    font-size: 30px;
-    font-weight: 500;
-    position: absolute;
-    text-align: center;
-    top: 85px;
-    width: 100%;
-}
-.single-blog-area h2.sidebar-title {
-    background: #efefef none repeat scroll 0 0;
-    color: #000;
-    font-family: Geometria;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    margin-top: 50px;
-    padding: 21px 25px;
-    text-transform: uppercase;
-}
-.single-blog-area .tags p {
-    background: #40c4ff none repeat scroll 0 0;
-    border-radius: 5px;
-    display: inline-block;
-    font-family: Geometria;
-    font-size: 13px;
-    font-weight: 500;
-    margin-right: 4px;
-    padding: 0 12px;
-    margin-bottom: 7px;
-}
-.single-blog-area .tags p a {
-    color: #fff;
-    display: inline-block;
-    text-decoration: none;
-}
-.single-blog-area .newsletter form {
-    margin: 30px 0 0;
-}
-.single-blog-area .newsletter input[type="email"] {
-    width: 50%;
-    margin-right: 20px;
-}
-.single-blog-area .newsletter input[type="submit"] {
-    width: 40%;
-    background: #40c4ff;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: Geometria;
-    font-size: 15px;
-    font-weight: 500;
-}
-#footer {
-  background: DodgerBlue;
-  padding: 30px 0;
-  color: #fff;
-}
-
-#footer .copyright {
-  text-align: center;
-}
-
-#footer .credits {
-  padding-top: 10px;
-  text-align: center;
-  font-size: 13px;
-  color: #ccc;
-}
-.links {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  font-size: 15px;
-  color: #ffffff;
-}
-.address {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  font-size: 15px;
-  color: #ccc;
-}
-</style>
 </head>
 
 <body>
 
-      <!--==========================
+    <!--==========================
   Header Section
   ============================-->
-  <header id="header">
-    <div class="container">
+    <header id="header">
+        <div class="container">
 
-      <div id="logo" class="pull-left">
-        <a href="#hero"><img src="img/Sam.jpg" alt="" title="" /></img></a>
-        <!-- Uncomment below if you prefer to use a text image -->
-        <!--<h1><a href="#hero">Header 1</a></h1>-->
-      </div>
+            <div id="logo" class="pull-left">
+                <a href="Pathway to light.html">
+                    <svg width="185" height="135" viewBox="0 0 185 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="67.5" cy="67.5" r="67" fill="#1E90FF" stroke="#FDFDFD"/>
+            <rect x="46.1205" y="40.7696" width="6.6428" height="40.2304" fill="white"/>
+            <rect x="33.5341" y="54.1797" width="31.4659" height="5.36405" fill="white"/>
+            <line y1="-0.5" x2="24.8685" y2="-0.5" transform="matrix(0.695021 0.71899 -0.712997 0.701167 26 34.3018)" stroke="white"/>
+            <line y1="-0.5" x2="16.6722" y2="-0.5" transform="matrix(0.345566 0.938394 -0.936442 0.350821 39.2954 34.3018)" stroke="white"/>
+            <line y1="-0.5" x2="16.5797" y2="-0.5" transform="matrix(0.875895 0.482501 -0.47616 0.879358 26 45.9239)" stroke="white"/>
+            <line y1="-0.5" x2="16.6541" y2="-0.5" transform="matrix(-0.305014 0.953733 -0.949669 -0.308976 58.1668 34)" stroke="white"/>
+            <line y1="-0.5" x2="16.6682" y2="-0.5" transform="matrix(-0.518954 -0.853565 0.851376 -0.526591 62.0028 79.5991)" stroke="white"/>
+            <line y1="-0.5" x2="24.8631" y2="-0.5" transform="matrix(0.679179 -0.734528 0.728089 0.684888 26.905 80.1221)" stroke="white"/>
+            <line y1="-0.5" x2="16.5644" y2="-0.5" transform="matrix(0.918855 -0.395274 0.389364 0.920797 26.2736 66.7271)" stroke="white"/>
+            <line y1="-0.5" x2="16.6566" y2="-0.5" transform="matrix(0.434225 -0.901183 0.897615 0.439998 38.4147 79.5702)" stroke="white"/>
+            <path d="M37.8649 118.299C49.787 111.656 52.8595 96.4716 52.9055 89.71" stroke="white"/>
+            <path d="M44.8919 103.309C48.0156 100.83 48.9357 95.4743 49.0052 93.1066" stroke="white"/>
+            <path d="M33 113.032C36.867 112.844 40.3057 108.569 41.5416 106.455" stroke="white"/>
+            <path d="M34.6216 108.624C41.4449 104.937 45.2261 94.2506 46.2637 89.3683" stroke="white"/>
+            <path d="M73.602 53.098C73.602 53.91 73.322 54.5867 72.762 55.128C72.2113 55.66 71.3667 55.926 70.228 55.926H68.352V60H67.078V50.242H70.228C71.3293 50.242 72.1647 50.508 72.734 51.04C73.3127 51.572 73.602 52.258 73.602 53.098ZM70.228 54.876C70.9373 54.876 71.46 54.722 71.796 54.414C72.132 54.106 72.3 53.6673 72.3 53.098C72.3 51.894 71.6093 51.292 70.228 51.292H68.352V54.876H70.228ZM74.7094 56.136C74.7094 55.352 74.8681 54.666 75.1854 54.078C75.5028 53.4807 75.9368 53.0187 76.4874 52.692C77.0474 52.3653 77.6681 52.202 78.3494 52.202C79.0214 52.202 79.6048 52.3467 80.0994 52.636C80.5941 52.9253 80.9628 53.2893 81.2054 53.728V52.328H82.4934V60H81.2054V58.572C80.9534 59.02 80.5754 59.3933 80.0714 59.692C79.5768 59.9813 78.9981 60.126 78.3354 60.126C77.6541 60.126 77.0381 59.958 76.4874 59.622C75.9368 59.286 75.5028 58.8147 75.1854 58.208C74.8681 57.6013 74.7094 56.9107 74.7094 56.136ZM81.2054 56.15C81.2054 55.5713 81.0888 55.0673 80.8554 54.638C80.6221 54.2087 80.3048 53.882 79.9034 53.658C79.5114 53.4247 79.0774 53.308 78.6014 53.308C78.1254 53.308 77.6914 53.42 77.2994 53.644C76.9074 53.868 76.5948 54.1947 76.3614 54.624C76.1281 55.0533 76.0114 55.5573 76.0114 56.136C76.0114 56.724 76.1281 57.2373 76.3614 57.676C76.5948 58.1053 76.9074 58.4367 77.2994 58.67C77.6914 58.894 78.1254 59.006 78.6014 59.006C79.0774 59.006 79.5114 58.894 79.9034 58.67C80.3048 58.4367 80.6221 58.1053 80.8554 57.676C81.0888 57.2373 81.2054 56.7287 81.2054 56.15ZM86.2004 53.378V57.9C86.2004 58.2733 86.2797 58.5393 86.4384 58.698C86.597 58.8473 86.8724 58.922 87.2644 58.922H88.2024V60H87.0544C86.345 60 85.813 59.8367 85.4584 59.51C85.1037 59.1833 84.9264 58.6467 84.9264 57.9V53.378H83.9324V52.328H84.9264V50.396H86.2004V52.328H88.2024V53.378H86.2004ZM93.554 52.188C94.1326 52.188 94.6553 52.314 95.122 52.566C95.5886 52.8087 95.9526 53.1773 96.214 53.672C96.4846 54.1667 96.62 54.7687 96.62 55.478V60H95.36V55.66C95.36 54.8947 95.1686 54.3113 94.786 53.91C94.4033 53.4993 93.8806 53.294 93.218 53.294C92.546 53.294 92.0093 53.504 91.608 53.924C91.216 54.344 91.02 54.9553 91.02 55.758V60H89.746V49.64H91.02V53.42C91.272 53.028 91.6173 52.7247 92.056 52.51C92.504 52.2953 93.0033 52.188 93.554 52.188ZM108.921 52.328L106.527 60H105.211L103.363 53.91L101.515 60H100.199L97.791 52.328H99.093L100.857 58.768L102.761 52.328H104.063L105.925 58.782L107.661 52.328H108.921ZM109.709 56.136C109.709 55.352 109.868 54.666 110.185 54.078C110.503 53.4807 110.937 53.0187 111.487 52.692C112.047 52.3653 112.668 52.202 113.349 52.202C114.021 52.202 114.605 52.3467 115.099 52.636C115.594 52.9253 115.963 53.2893 116.205 53.728V52.328H117.493V60H116.205V58.572C115.953 59.02 115.575 59.3933 115.071 59.692C114.577 59.9813 113.998 60.126 113.335 60.126C112.654 60.126 112.038 59.958 111.487 59.622C110.937 59.286 110.503 58.8147 110.185 58.208C109.868 57.6013 109.709 56.9107 109.709 56.136ZM116.205 56.15C116.205 55.5713 116.089 55.0673 115.855 54.638C115.622 54.2087 115.305 53.882 114.903 53.658C114.511 53.4247 114.077 53.308 113.601 53.308C113.125 53.308 112.691 53.42 112.299 53.644C111.907 53.868 111.595 54.1947 111.361 54.624C111.128 55.0533 111.011 55.5573 111.011 56.136C111.011 56.724 111.128 57.2373 111.361 57.676C111.595 58.1053 111.907 58.4367 112.299 58.67C112.691 58.894 113.125 59.006 113.601 59.006C114.077 59.006 114.511 58.894 114.903 58.67C115.305 58.4367 115.622 58.1053 115.855 57.676C116.089 57.2373 116.205 56.7287 116.205 56.15ZM126.254 52.328L121.634 63.612H120.318L121.83 59.916L118.736 52.328H120.15L122.558 58.544L124.938 52.328H126.254Z" fill="white"/>
+            <path d="M69.632 66.378V70.9C69.632 71.2733 69.7113 71.5393 69.87 71.698C70.0287 71.8473 70.304 71.922 70.696 71.922H71.634V73H70.486C69.7767 73 69.2447 72.8367 68.89 72.51C68.5353 72.1833 68.358 71.6467 68.358 70.9V66.378H67.364V65.328H68.358V63.396H69.632V65.328H71.634V66.378H69.632ZM76.5236 73.126C75.8049 73.126 75.1516 72.9627 74.5636 72.636C73.9849 72.3093 73.5276 71.8473 73.1916 71.25C72.8649 70.6433 72.7016 69.9433 72.7016 69.15C72.7016 68.366 72.8696 67.6753 73.2056 67.078C73.5509 66.4713 74.0176 66.0093 74.6056 65.692C75.1936 65.3653 75.8516 65.202 76.5796 65.202C77.3076 65.202 77.9656 65.3653 78.5536 65.692C79.1416 66.0093 79.6036 66.4667 79.9396 67.064C80.2849 67.6613 80.4576 68.3567 80.4576 69.15C80.4576 69.9433 80.2803 70.6433 79.9256 71.25C79.5803 71.8473 79.1089 72.3093 78.5116 72.636C77.9143 72.9627 77.2516 73.126 76.5236 73.126ZM76.5236 72.006C76.9809 72.006 77.4103 71.8987 77.8116 71.684C78.2129 71.4693 78.5349 71.1473 78.7776 70.718C79.0296 70.2887 79.1556 69.766 79.1556 69.15C79.1556 68.534 79.0343 68.0113 78.7916 67.582C78.5489 67.1527 78.2316 66.8353 77.8396 66.63C77.4476 66.4153 77.0229 66.308 76.5656 66.308C76.0989 66.308 75.6696 66.4153 75.2776 66.63C74.8949 66.8353 74.5869 67.1527 74.3536 67.582C74.1203 68.0113 74.0036 68.534 74.0036 69.15C74.0036 69.7753 74.1156 70.3027 74.3396 70.732C74.5729 71.1613 74.8809 71.4833 75.2636 71.698C75.6463 71.9033 76.0663 72.006 76.5236 72.006Z" fill="white"/>
+            <path d="M69.352 86.964H72.768V88H68.078V78.242H69.352V86.964ZM74.779 79.082C74.5363 79.082 74.331 78.998 74.163 78.83C73.995 78.662 73.911 78.4567 73.911 78.214C73.911 77.9713 73.995 77.766 74.163 77.598C74.331 77.43 74.5363 77.346 74.779 77.346C75.0123 77.346 75.2083 77.43 75.367 77.598C75.535 77.766 75.619 77.9713 75.619 78.214C75.619 78.4567 75.535 78.662 75.367 78.83C75.2083 78.998 75.0123 79.082 74.779 79.082ZM75.395 80.328V88H74.121V80.328H75.395ZM80.7303 80.202C81.3929 80.202 81.9716 80.3467 82.4663 80.636C82.9703 80.9253 83.3436 81.2893 83.5863 81.728V80.328H84.8743V88.168C84.8743 88.868 84.7249 89.4887 84.4263 90.03C84.1276 90.5807 83.6983 91.01 83.1383 91.318C82.5876 91.626 81.9436 91.78 81.2063 91.78C80.1983 91.78 79.3583 91.542 78.6863 91.066C78.0143 90.59 77.6176 89.9413 77.4963 89.12H78.7563C78.8963 89.5867 79.1856 89.96 79.6243 90.24C80.0629 90.5293 80.5903 90.674 81.2063 90.674C81.9063 90.674 82.4756 90.4547 82.9143 90.016C83.3623 89.5773 83.5863 88.9613 83.5863 88.168V86.558C83.3343 87.006 82.9609 87.3793 82.4663 87.678C81.9716 87.9767 81.3929 88.126 80.7303 88.126C80.0489 88.126 79.4283 87.958 78.8683 87.622C78.3176 87.286 77.8836 86.8147 77.5663 86.208C77.2489 85.6013 77.0903 84.9107 77.0903 84.136C77.0903 83.352 77.2489 82.666 77.5663 82.078C77.8836 81.4807 78.3176 81.0187 78.8683 80.692C79.4283 80.3653 80.0489 80.202 80.7303 80.202ZM83.5863 84.15C83.5863 83.5713 83.4696 83.0673 83.2363 82.638C83.0029 82.2087 82.6856 81.882 82.2843 81.658C81.8923 81.4247 81.4583 81.308 80.9823 81.308C80.5063 81.308 80.0723 81.42 79.6803 81.644C79.2883 81.868 78.9756 82.1947 78.7423 82.624C78.5089 83.0533 78.3923 83.5573 78.3923 84.136C78.3923 84.724 78.5089 85.2373 78.7423 85.676C78.9756 86.1053 79.2883 86.4367 79.6803 86.67C80.0723 86.894 80.5063 87.006 80.9823 87.006C81.4583 87.006 81.8923 86.894 82.2843 86.67C82.6856 86.4367 83.0029 86.1053 83.2363 85.676C83.4696 85.2373 83.5863 84.7287 83.5863 84.15ZM90.8352 80.188C91.4139 80.188 91.9366 80.314 92.4032 80.566C92.8699 80.8087 93.2339 81.1773 93.4952 81.672C93.7659 82.1667 93.9012 82.7687 93.9012 83.478V88H92.6412V83.66C92.6412 82.8947 92.4499 82.3113 92.0672 81.91C91.6846 81.4993 91.1619 81.294 90.4992 81.294C89.8272 81.294 89.2906 81.504 88.8892 81.924C88.4972 82.344 88.3012 82.9553 88.3012 83.758V88H87.0272V77.64H88.3012V81.42C88.5532 81.028 88.8986 80.7247 89.3372 80.51C89.7852 80.2953 90.2846 80.188 90.8352 80.188ZM97.5363 81.378V85.9C97.5363 86.2733 97.6156 86.5393 97.7743 86.698C97.933 86.8473 98.2083 86.922 98.6003 86.922H99.5383V88H98.3903C97.681 88 97.149 87.8367 96.7943 87.51C96.4396 87.1833 96.2623 86.6467 96.2623 85.9V81.378H95.2683V80.328H96.2623V78.396H97.5363V80.328H99.5383V81.378H97.5363Z" fill="white"/>
+            </svg>
+                </a>
+                <!-- Uncomment below if you prefer to use a text image -->
+                <!--<h1><a href="#hero">Header 1</a></h1>-->
+            </div>
 
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          
-          <li class="menu-has-children"><a href="">Menu</a>
-            <ul>
-              <li><a href="Favourite girl.html">About Us</a></li>
-               <li><a href="contact me.html">Contact Me</a></li>
-               <li><a href="Help.html">Help</a></li>
-               <li><a href="Privacy.html">Privacy</a></li>
-              
-            </ul>
-          </li>
-        
-        </ul>
-      </nav>
-      <!-- #nav-menu-container -->
-    </div>
-  </header>
-  <!-- #header -->
+            <div id="nav bar">
+                <ul>
 
-  <div class="read">
-  <h2>Read</h2>
-</div>
+                    <li><a href="Listen Up.html">Listen</a></li>
+                    <li><a href="Pathway to light.html">Home</a></li>
+                </ul>
+            </div>
 
-    <div class="wrapper">
-       
-       
-        <section class="blog-post-area">
+            <!-- #nav-menu-container -->
+        </div>
+    </header>
+
+
+    <div class="blog-cards">
+
+        <div class="row">
             <div class="container">
-                <div class="row">
-                    <div class="blog-post-area-style">
-                            
-                                    <div class="col-md-3">
-                                <div class="single-post">
-                                    <img src="img/Read me.jpg" alt="" height="177" width="284">
-                                    <h3><a href="#">Bible reading during Corona.</a></h3>
-                                    <h4><span>Posted By: <span class="author-name">Samuel Njoroge</span></span>
-                                    </h4>
-                                    <p>The Covid-19 pandemic has been on for the past few months...</p>
-      <a href="bible reading during corona.html" class="btn tm-btn-gray">Read More</a>  
-                                    <h4><span>5th May 2020</span></h4>
+
+                <div class="col-md-12">
+                    <div class="blog-card">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <img class="cover_img" src="img/Desiring_God.jpg" alt="" width="550px" height="250px">
+                            </div>
+                            <div class="col-md-6 blog-desc">
+                                <h1>One</h1>
+                                <p class="description">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi consequuntur aperiam magni quam sit dolor similique illum accusantium quo voluptas nam, impedit inventore laudantium, maiores est, labore ullam animi voluptatem.
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img class="author-pic" src="img/GaldSam.JPG" alt="">
+                                    </div>
+                                    <div class="col-md-8 blog-by">
+                                        <h3> Article By:</h3>
+                                        <h4>Date</h4>
+
+                                        <input class="my-btn" type="button" value="Read More" onclick="window.location='../Pathway!/bible reading during corona.html';">
+
+
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="single-post">
-                                    <img src="img/Worship.jpg" height="177" width="284" alt="">
-                                    <h3><a href="#">Have you prayed today?</a></h3>
-                                    <h4><span>Posted By: <span class="author-name">Sharon Murugi</span></span>
-                                    </h4>
-                                   <p>We are in the Covid-19 season which we are trusting God to....</p>
-       <a href="have you prayed today.html" class="btn tm-btn-gray">Read More</a> 
-                                    <h4><span>10th May 2020</span></h4>
-                                </div>
-                            </div>
-                             <div class="col-md-3">
-                                <div class="single-post">
-                                    <img src="img/Desiring God.jpg" height="177" width="284" alt="">
-                                    <h3><a href="#">Do not limit yourself.</a></h3>
-                                    <h4><span>Posted By: <span class="author-name">Dinah Wangari</span></span>
-                                    </h4>
-                                    <p>Don't limit yourself, God can use anyone....</p>
-                                    <a href="have you prayed today.html" class="btn tm-btn-gray">Read More</a>
-                                    <h4><span>15th May 2020</span></h4>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="single-post">
-                                    <img src="img/Happy people.jpg" alt="" height="177" width="284">
-                                    <h3><a href="#">Come as you are and be freed</a></h3>
-                                    <h4><span>Posted By: <span class="author-name">Ruth Wamuyu</span></span>
-                                    </h4>
-                                    <p>Let Christ do the work of cleaning you up, come as you are...</p>
-                                    <a href="have you prayed today.html" class="btn tm-btn-gray">Read More</a>
-                                    <h4><span>20th May 2020</span></h4>
-                                </div>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="pegination">
-                <!--
-                <ul>
-                    <li><i class="fa fa-angle-left" aria-hidden="true"></i></li>
-                    <li class="active">1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-                </ul>
--->
+        </div>
+        <div>
+            <br>
+        </div>
 
-                <div class="nav-links">
-                    <span class="page-numbers current">1</span>
-                   <a class="page-numbers" href="index 2.html">2</a>
-                    <a class="page-numbers" href="#">3</a>
-                    <a class="page-numbers" href="#">4</a>
-                    <a class="page-numbers" href="#">5</a>
-                    <a class="page-numbers" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+
+        <div class="row">
+            <div class="container">
+
+                <div class="col-md-12">
+                    <div class="blog-card">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <img class="cover_img" src="img/Desiring_God.jpg" alt="" width="550px" height="250px">
+                            </div>
+                            <div class="col-md-6 blog-desc">
+                                <h1>One</h1>
+                                <p class="description">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi consequuntur aperiam magni quam sit dolor similique illum accusantium quo voluptas nam, impedit inventore laudantium, maiores est, labore ullam animi voluptatem.
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img class="author-pic" src="img/GaldSam.JPG" alt="">
+                                    </div>
+                                    <div class="col-md-8 blog-by">
+                                        <h3> Article By:</h3>
+                                        <h4>Date</h4>
+                                        <a href="../Pathway!/Come as you are and be freed.html">
+                                            <input class="my-btn" type="button" value="Read More">
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-      
+        </div>
+        <div>
+            <br>
+        </div>
+
+
+
+        <div class="row">
+            <div class="container">
+
+                <div class="col-md-12">
+                    <div class="blog-card">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <img class="cover_img" src="img/Desiring_God.jpg" alt="" width="550px" height="250px">
+                            </div>
+                            <div class="col-md-6 blog-desc">
+                                <h1>One</h1>
+                                <p class="description">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi consequuntur aperiam magni quam sit dolor similique illum accusantium quo voluptas nam, impedit inventore laudantium, maiores est, labore ullam animi voluptatem.
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img class="author-pic" src="img/GaldSam.JPG" alt="">
+                                    </div>
+                                    <div class="col-md-8 blog-by">
+                                        <h3> Article By:</h3>
+                                        <h4>Date</h4>
+                                        <a href="../Pathway!/do not limit yourself.html">
+                                            <input class="my-btn" type="button" value="Read More">
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <br>
+        </div>
+
+
+
+        <div class="row">
+            <div class="container">
+
+                <div class="col-md-12">
+                    <div class="blog-card">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="cover_img" src="img/Desiring_God.jpg" alt="" width="550px" height="250px">
+                            </div>
+                            <div class="col-md-6 blog-desc">
+                                <h1>One</h1>
+                                <p class="description">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi consequuntur aperiam magni quam sit dolor similique illum accusantium quo voluptas nam, impedit inventore laudantium, maiores est, labore ullam animi voluptatem.
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img class="author-pic" src="img/GaldSam.JPG" alt="">
+                                    </div>
+                                    <div class="col-md-8 blog-by">
+                                        <h3> Article By:</h3>
+                                        <h4>Date</h4>
+                                        <a href="../Pathway!/have you prayed today.html">
+                                            <input class="my-btn" type="button" value="Read More">
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <br>
+        </div>
+
+
+
+
     </div>
 
+
     <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="copyright">
-            &copy; Copyright <strong>UGI & BUCCI</strong>. All Rights Reserved
-          </div>
-            <div class="links">
-            
-             <a href="contact me.html">Contact Me</a> |<a href="Help.html">Help</a> |<a href="Privacy.html">Privacy</a>|
-          <div class="credits">
-            <!--
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright">
+                        &copy; Copyright <strong>UGI & BUCCI</strong>. All Rights Reserved
+                    </div>
+                    <div class="links">
+
+                        <a href="contact me.html">Contact Me</a> |<a href="Help.html">Help</a> |<a href="Privacy.html">Privacy</a>|
+                        <div class="credits">
+                            <!--
               All the links in the footer should remain intact.
               You can delete the links only if you purchased the pro version.
               Licensing information: https://bootstrapmade.com/license/
               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Imperial
             -->
-             <a href="https://facebook.com/">Facebook</a> |<a href="https://instagram.com/">Instagram</a> |<a href="https://Twitter.com/">Twitter</a> |
-          </div>
-          <div class="address">
-            
-            <strong>Galana Plaza, Galana Road off Argwings Kodhek, Nairobi </strong>   
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- #footer -->
+                            <a href="https://facebook.com/">Facebook</a> |<a href="https://instagram.com/">Instagram</a> |<a href="https://Twitter.com/">Twitter</a> |
+                        </div>
+                        <div class="address">
+
+                            <strong>Galana Plaza, Galana Road off Argwings Kodhek, Nairobi </strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <!-- #footer -->
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>

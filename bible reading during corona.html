@@ -1,56 +1,591 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<style> 
-footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: 64,224,208;
-   color: white;
-   text-align: center;
+  <meta charset="utf-8">
+  <title>Imperial Boootstrap Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Imperial
+    Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+  <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Covered By Your Grace' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Coiny' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<style>
+* {
+  box-sizing: border-box;
+}
+#header {
+  background: #2F195F;
+  padding: 20px 0;
+  height: 90px;
+}
+
+#header #logo {
+  float: left;
+}
+
+#header #logo h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 6px 0;
+  line-height: 1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header #logo h1 a, #header #logo h1 a:hover {
+  color: #fff;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 50px;
+}
+
+@media (max-width: 768px) {
+  #header {
+    height: 80px;
+  }
+  #header #logo h1 {
+    font-size: 26px;
+  }
+  #header #logo img {
+    max-height: 40px;
+  }
+}
+
+.is-sticky #header {
+  background: #2F195F;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Nav Menu Essentials */
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+/* Nav Menu Arrows */
+.sf-arrows .sf-with-ul {
+  padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: "\f107";
+  position: absolute;
+  right: 15px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+/* Nav Meu Container */
+#nav-menu-container {
+  float: right;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  #nav-menu-container {
+    display: none;
+  }
+}
+
+/* Nav Meu Styling */
+.nav-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  outline: none;
+}
+
+.nav-menu a:hover, .nav-menu li:hover > a, .nav-menu .menu-active > a {
+  color: #2F195F;
+}
+
+.nav-menu ul {
+  margin: 4px 0 0 15px;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.nav-menu ul li {
+  background: #ccc;
+  border-top: 1px solid #f4f4f4;
+}
+
+.nav-menu ul li:first-child {
+  border-top: 0;
+}
+
+.nav-menu ul li:hover {
+  background: #f6f6f6;
+}
+
+.nav-menu ul li a {
+  color: #333;
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+
+/* Mobile Nav Toggle */
+#mobile-nav-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 20px 20px 0 0;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  display: none;
+  transition: all 0.4s;
+  outline: none;
+}
+
+#mobile-nav-toggle i {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #mobile-nav-toggle {
+    display: inline;
+  }
+}
+
+/* Mobile Nav Styling */
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  padding-top: 18px;
+  bottom: 0;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.9);
+  left: -260px;
+  width: 260px;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+
+#mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#mobile-nav ul li {
+  position: relative;
+}
+
+#mobile-nav ul li a {
+  color: #fff;
+  font-size: 16px;
+  overflow: hidden;
+  padding: 10px 22px 10px 15px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+#mobile-nav ul li a:hover {
+  color: #fff;
+}
+
+#mobile-nav ul li li {
+  padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+  color: #03C4EB;
+}
+
+#mobile-nav ul .menu-item-active {
+  color: #03C4EB;
+}
+
+#mobile-body-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+/* Mobile Nav body classes */
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+  left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+  color: #fff;
+}
+
+
+#footer {
+  background: #2F195F;
+  padding: 30px 0;
+  color: #fff;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+}
+.links {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #ffffff;
+}
+.address {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #ccc;
+}
+div#container1{
+  font-family: 'Caveat'; font-size: 22px;;
+  padding: 10px;
+  background: #1C448E;
+  max-height: 400px;
+}
+/* Header/Blog Title */
+
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color:dodgerblue;
+  position: fixed;
+  top:0;
+  width: 100%;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  margin-left: 0px;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+}
+ div#container{
+  	 max-width: 70%;
+    text-align: center;
+    background-color: white;
+    margin: 0px auto;
+    margin-top: 5%;
+  }
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #3E7CB1;
+  color: black;
+}
+.active{
+background-color:#0496FF;
+}
+.checkbtn
+{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 0px;
+  margin-right: 40px;
+  cursor: pointer;
+} 
+#check
+{
+  display: none;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: ;
+  width: 100%;
+}
+
+/* Right column */
+
+
+
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #1C448E;
+  margin-top: 20px;
+  color: white;
+  max-height: 10%;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
 }
 </style>
 </head>
 <body>
-<div class="container">
-                                                           <h3>Bible reading during Corona. </h3>
-                                                           <img src="img/Read me.jpg" width="200" height="100">
-                                                           <p class="date"><a href="#">Sharon Murugi</a> on 10th May 2020 |</p>
-                                                        <p class="mb-4">The Covid-19 pandemic has been on for the past few months with the medics in countries all over the world tirelessly looking for a vaccine. Even as they do so let us remember as Christians to read our Bibles each and every single day. The Bible offers guidance t othose who may lack it, it offers hope to the broken hearted. It calms and offers peace to the anxious.</p>
-                                                        <p class="mb-4">We read the bible so we don’t start getting comfortable.
 
-Make sure Christ is always first in your life. You don’t want to drift from Him.
 
-Revelation 2:4 “Yet I hold this against you: You have forsaken the love you had at first.”
+  <header id="header">
+    <div class="container">
 
-Romans 12:11 “Do not be slothful in zeal, be fervent in spirit, serve the Lord.”
+      <div id="logo" class="pull-left">
+        <a href="Pathway to light.html">
+          <svg width="185" height="135" viewBox="0 0 185 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="67.5" cy="67.5" r="67" fill="#1E90FF" stroke="#FDFDFD"/>
+            <rect x="46.1205" y="40.7696" width="6.6428" height="40.2304" fill="white"/>
+            <rect x="33.5341" y="54.1797" width="31.4659" height="5.36405" fill="white"/>
+            <line y1="-0.5" x2="24.8685" y2="-0.5" transform="matrix(0.695021 0.71899 -0.712997 0.701167 26 34.3018)" stroke="white"/>
+            <line y1="-0.5" x2="16.6722" y2="-0.5" transform="matrix(0.345566 0.938394 -0.936442 0.350821 39.2954 34.3018)" stroke="white"/>
+            <line y1="-0.5" x2="16.5797" y2="-0.5" transform="matrix(0.875895 0.482501 -0.47616 0.879358 26 45.9239)" stroke="white"/>
+            <line y1="-0.5" x2="16.6541" y2="-0.5" transform="matrix(-0.305014 0.953733 -0.949669 -0.308976 58.1668 34)" stroke="white"/>
+            <line y1="-0.5" x2="16.6682" y2="-0.5" transform="matrix(-0.518954 -0.853565 0.851376 -0.526591 62.0028 79.5991)" stroke="white"/>
+            <line y1="-0.5" x2="24.8631" y2="-0.5" transform="matrix(0.679179 -0.734528 0.728089 0.684888 26.905 80.1221)" stroke="white"/>
+            <line y1="-0.5" x2="16.5644" y2="-0.5" transform="matrix(0.918855 -0.395274 0.389364 0.920797 26.2736 66.7271)" stroke="white"/>
+            <line y1="-0.5" x2="16.6566" y2="-0.5" transform="matrix(0.434225 -0.901183 0.897615 0.439998 38.4147 79.5702)" stroke="white"/>
+            <path d="M37.8649 118.299C49.787 111.656 52.8595 96.4716 52.9055 89.71" stroke="white"/>
+            <path d="M44.8919 103.309C48.0156 100.83 48.9357 95.4743 49.0052 93.1066" stroke="white"/>
+            <path d="M33 113.032C36.867 112.844 40.3057 108.569 41.5416 106.455" stroke="white"/>
+            <path d="M34.6216 108.624C41.4449 104.937 45.2261 94.2506 46.2637 89.3683" stroke="white"/>
+            <path d="M73.602 53.098C73.602 53.91 73.322 54.5867 72.762 55.128C72.2113 55.66 71.3667 55.926 70.228 55.926H68.352V60H67.078V50.242H70.228C71.3293 50.242 72.1647 50.508 72.734 51.04C73.3127 51.572 73.602 52.258 73.602 53.098ZM70.228 54.876C70.9373 54.876 71.46 54.722 71.796 54.414C72.132 54.106 72.3 53.6673 72.3 53.098C72.3 51.894 71.6093 51.292 70.228 51.292H68.352V54.876H70.228ZM74.7094 56.136C74.7094 55.352 74.8681 54.666 75.1854 54.078C75.5028 53.4807 75.9368 53.0187 76.4874 52.692C77.0474 52.3653 77.6681 52.202 78.3494 52.202C79.0214 52.202 79.6048 52.3467 80.0994 52.636C80.5941 52.9253 80.9628 53.2893 81.2054 53.728V52.328H82.4934V60H81.2054V58.572C80.9534 59.02 80.5754 59.3933 80.0714 59.692C79.5768 59.9813 78.9981 60.126 78.3354 60.126C77.6541 60.126 77.0381 59.958 76.4874 59.622C75.9368 59.286 75.5028 58.8147 75.1854 58.208C74.8681 57.6013 74.7094 56.9107 74.7094 56.136ZM81.2054 56.15C81.2054 55.5713 81.0888 55.0673 80.8554 54.638C80.6221 54.2087 80.3048 53.882 79.9034 53.658C79.5114 53.4247 79.0774 53.308 78.6014 53.308C78.1254 53.308 77.6914 53.42 77.2994 53.644C76.9074 53.868 76.5948 54.1947 76.3614 54.624C76.1281 55.0533 76.0114 55.5573 76.0114 56.136C76.0114 56.724 76.1281 57.2373 76.3614 57.676C76.5948 58.1053 76.9074 58.4367 77.2994 58.67C77.6914 58.894 78.1254 59.006 78.6014 59.006C79.0774 59.006 79.5114 58.894 79.9034 58.67C80.3048 58.4367 80.6221 58.1053 80.8554 57.676C81.0888 57.2373 81.2054 56.7287 81.2054 56.15ZM86.2004 53.378V57.9C86.2004 58.2733 86.2797 58.5393 86.4384 58.698C86.597 58.8473 86.8724 58.922 87.2644 58.922H88.2024V60H87.0544C86.345 60 85.813 59.8367 85.4584 59.51C85.1037 59.1833 84.9264 58.6467 84.9264 57.9V53.378H83.9324V52.328H84.9264V50.396H86.2004V52.328H88.2024V53.378H86.2004ZM93.554 52.188C94.1326 52.188 94.6553 52.314 95.122 52.566C95.5886 52.8087 95.9526 53.1773 96.214 53.672C96.4846 54.1667 96.62 54.7687 96.62 55.478V60H95.36V55.66C95.36 54.8947 95.1686 54.3113 94.786 53.91C94.4033 53.4993 93.8806 53.294 93.218 53.294C92.546 53.294 92.0093 53.504 91.608 53.924C91.216 54.344 91.02 54.9553 91.02 55.758V60H89.746V49.64H91.02V53.42C91.272 53.028 91.6173 52.7247 92.056 52.51C92.504 52.2953 93.0033 52.188 93.554 52.188ZM108.921 52.328L106.527 60H105.211L103.363 53.91L101.515 60H100.199L97.791 52.328H99.093L100.857 58.768L102.761 52.328H104.063L105.925 58.782L107.661 52.328H108.921ZM109.709 56.136C109.709 55.352 109.868 54.666 110.185 54.078C110.503 53.4807 110.937 53.0187 111.487 52.692C112.047 52.3653 112.668 52.202 113.349 52.202C114.021 52.202 114.605 52.3467 115.099 52.636C115.594 52.9253 115.963 53.2893 116.205 53.728V52.328H117.493V60H116.205V58.572C115.953 59.02 115.575 59.3933 115.071 59.692C114.577 59.9813 113.998 60.126 113.335 60.126C112.654 60.126 112.038 59.958 111.487 59.622C110.937 59.286 110.503 58.8147 110.185 58.208C109.868 57.6013 109.709 56.9107 109.709 56.136ZM116.205 56.15C116.205 55.5713 116.089 55.0673 115.855 54.638C115.622 54.2087 115.305 53.882 114.903 53.658C114.511 53.4247 114.077 53.308 113.601 53.308C113.125 53.308 112.691 53.42 112.299 53.644C111.907 53.868 111.595 54.1947 111.361 54.624C111.128 55.0533 111.011 55.5573 111.011 56.136C111.011 56.724 111.128 57.2373 111.361 57.676C111.595 58.1053 111.907 58.4367 112.299 58.67C112.691 58.894 113.125 59.006 113.601 59.006C114.077 59.006 114.511 58.894 114.903 58.67C115.305 58.4367 115.622 58.1053 115.855 57.676C116.089 57.2373 116.205 56.7287 116.205 56.15ZM126.254 52.328L121.634 63.612H120.318L121.83 59.916L118.736 52.328H120.15L122.558 58.544L124.938 52.328H126.254Z" fill="white"/>
+            <path d="M69.632 66.378V70.9C69.632 71.2733 69.7113 71.5393 69.87 71.698C70.0287 71.8473 70.304 71.922 70.696 71.922H71.634V73H70.486C69.7767 73 69.2447 72.8367 68.89 72.51C68.5353 72.1833 68.358 71.6467 68.358 70.9V66.378H67.364V65.328H68.358V63.396H69.632V65.328H71.634V66.378H69.632ZM76.5236 73.126C75.8049 73.126 75.1516 72.9627 74.5636 72.636C73.9849 72.3093 73.5276 71.8473 73.1916 71.25C72.8649 70.6433 72.7016 69.9433 72.7016 69.15C72.7016 68.366 72.8696 67.6753 73.2056 67.078C73.5509 66.4713 74.0176 66.0093 74.6056 65.692C75.1936 65.3653 75.8516 65.202 76.5796 65.202C77.3076 65.202 77.9656 65.3653 78.5536 65.692C79.1416 66.0093 79.6036 66.4667 79.9396 67.064C80.2849 67.6613 80.4576 68.3567 80.4576 69.15C80.4576 69.9433 80.2803 70.6433 79.9256 71.25C79.5803 71.8473 79.1089 72.3093 78.5116 72.636C77.9143 72.9627 77.2516 73.126 76.5236 73.126ZM76.5236 72.006C76.9809 72.006 77.4103 71.8987 77.8116 71.684C78.2129 71.4693 78.5349 71.1473 78.7776 70.718C79.0296 70.2887 79.1556 69.766 79.1556 69.15C79.1556 68.534 79.0343 68.0113 78.7916 67.582C78.5489 67.1527 78.2316 66.8353 77.8396 66.63C77.4476 66.4153 77.0229 66.308 76.5656 66.308C76.0989 66.308 75.6696 66.4153 75.2776 66.63C74.8949 66.8353 74.5869 67.1527 74.3536 67.582C74.1203 68.0113 74.0036 68.534 74.0036 69.15C74.0036 69.7753 74.1156 70.3027 74.3396 70.732C74.5729 71.1613 74.8809 71.4833 75.2636 71.698C75.6463 71.9033 76.0663 72.006 76.5236 72.006Z" fill="white"/>
+            <path d="M69.352 86.964H72.768V88H68.078V78.242H69.352V86.964ZM74.779 79.082C74.5363 79.082 74.331 78.998 74.163 78.83C73.995 78.662 73.911 78.4567 73.911 78.214C73.911 77.9713 73.995 77.766 74.163 77.598C74.331 77.43 74.5363 77.346 74.779 77.346C75.0123 77.346 75.2083 77.43 75.367 77.598C75.535 77.766 75.619 77.9713 75.619 78.214C75.619 78.4567 75.535 78.662 75.367 78.83C75.2083 78.998 75.0123 79.082 74.779 79.082ZM75.395 80.328V88H74.121V80.328H75.395ZM80.7303 80.202C81.3929 80.202 81.9716 80.3467 82.4663 80.636C82.9703 80.9253 83.3436 81.2893 83.5863 81.728V80.328H84.8743V88.168C84.8743 88.868 84.7249 89.4887 84.4263 90.03C84.1276 90.5807 83.6983 91.01 83.1383 91.318C82.5876 91.626 81.9436 91.78 81.2063 91.78C80.1983 91.78 79.3583 91.542 78.6863 91.066C78.0143 90.59 77.6176 89.9413 77.4963 89.12H78.7563C78.8963 89.5867 79.1856 89.96 79.6243 90.24C80.0629 90.5293 80.5903 90.674 81.2063 90.674C81.9063 90.674 82.4756 90.4547 82.9143 90.016C83.3623 89.5773 83.5863 88.9613 83.5863 88.168V86.558C83.3343 87.006 82.9609 87.3793 82.4663 87.678C81.9716 87.9767 81.3929 88.126 80.7303 88.126C80.0489 88.126 79.4283 87.958 78.8683 87.622C78.3176 87.286 77.8836 86.8147 77.5663 86.208C77.2489 85.6013 77.0903 84.9107 77.0903 84.136C77.0903 83.352 77.2489 82.666 77.5663 82.078C77.8836 81.4807 78.3176 81.0187 78.8683 80.692C79.4283 80.3653 80.0489 80.202 80.7303 80.202ZM83.5863 84.15C83.5863 83.5713 83.4696 83.0673 83.2363 82.638C83.0029 82.2087 82.6856 81.882 82.2843 81.658C81.8923 81.4247 81.4583 81.308 80.9823 81.308C80.5063 81.308 80.0723 81.42 79.6803 81.644C79.2883 81.868 78.9756 82.1947 78.7423 82.624C78.5089 83.0533 78.3923 83.5573 78.3923 84.136C78.3923 84.724 78.5089 85.2373 78.7423 85.676C78.9756 86.1053 79.2883 86.4367 79.6803 86.67C80.0723 86.894 80.5063 87.006 80.9823 87.006C81.4583 87.006 81.8923 86.894 82.2843 86.67C82.6856 86.4367 83.0029 86.1053 83.2363 85.676C83.4696 85.2373 83.5863 84.7287 83.5863 84.15ZM90.8352 80.188C91.4139 80.188 91.9366 80.314 92.4032 80.566C92.8699 80.8087 93.2339 81.1773 93.4952 81.672C93.7659 82.1667 93.9012 82.7687 93.9012 83.478V88H92.6412V83.66C92.6412 82.8947 92.4499 82.3113 92.0672 81.91C91.6846 81.4993 91.1619 81.294 90.4992 81.294C89.8272 81.294 89.2906 81.504 88.8892 81.924C88.4972 82.344 88.3012 82.9553 88.3012 83.758V88H87.0272V77.64H88.3012V81.42C88.5532 81.028 88.8986 80.7247 89.3372 80.51C89.7852 80.2953 90.2846 80.188 90.8352 80.188ZM97.5363 81.378V85.9C97.5363 86.2733 97.6156 86.5393 97.7743 86.698C97.933 86.8473 98.2083 86.922 98.6003 86.922H99.5383V88H98.3903C97.681 88 97.149 87.8367 96.7943 87.51C96.4396 87.1833 96.2623 86.6467 96.2623 85.9V81.378H95.2683V80.328H96.2623V78.396H97.5363V80.328H99.5383V81.378H97.5363Z" fill="white"/>
+            </svg>
+        </a>
+        <!-- Uncomment below if you prefer to use a text image -->
+        <!--<h1><a href="#hero">Header 1</a></h1>-->
+      </div>
 
-Proverbs 28:9 “If anyone turns a deaf ear to my instruction, even their prayers are detestable.”</p>
-                                                        <p class="mb-4">We read the bible to spend time with the Lord.
+      <div id="nav bar">
+        <ul>
+          <li><a href="Help.html">Help</a></li>
+          <li><a class="active" href="Privacy.html">Privacy</a></li>
+          <li><a href="contact me.html">Contact Us</a></li>
+          <li><a href="About Us.html">About Us</a></li>
+          <li><a href="Pathway to light.html">Home</a></li>
+        </ul>
+      </div>
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+<div id ="container1">
+<div id ="container">
 
-Proverbs 2:6-7 “For the LORD gives wisdom; from his mouth come knowledge and understanding. He holds success in store for the upright, he is a shield to those whose walk is blameless.”
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Bible reading during corona</h2>
+      <h5>Dennis Kibuchi, Dec 7, 2017</h5>
+     <img src="img/abtract.jpg" alt="" height="177" width="870">
+    
+      <p>We are in the Covid-19 season which we are trusting God to help us navigate through these un-chatered waters. In our country (Kenya) we have been advised to stay indoors so as to reduce the risk of spreading it. And even as we do so we are waking up to news of increase in number of people wo have gotten the virus.
 
-2 Timothy 3:16 “All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness.”
- </p>
-                                                        <p class="mb-4">To guard yourself from false teachings and false teachers. 
+This at times may seem as a hopleless fight against an invisible enemy but let us not give up hope. So let us rememebr to pray each day since prayer is chief in a Christian's life together with reading the Bible.</p>
 
-1 John 4:1 “Dear friends, do not believe every spirit, but test the spirits to determine if they are from God, because many false prophets have gone out into the world.”
+<p>We pray because it is how we communicate with God. And while we may feel insecure asking what can feel like an elementary question, even Jesus’ disciples had to ask for themselves. There is nothing more important in life than to learn how to pray. Prayer is the most important thing we can learn how to do.
 
-Matthew 24:24-26 “For false messiahs and false prophets will appear and perform great signs and wonders to deceive, if possible, even the elect. Remember, I have told you ahead of time. So then, if someone says to you, ‘Look, he is in the wilderness,’ do not go out, or ‘Look, he is in the inner rooms,’ do not believe him.”</p>
-                                                        <p class="mb-4">To do God’s will: It helps you obey God and not sin.
+Prayer is where we learn to talk to God, understand him, connect with him, and understand ourselves.
 
-Psalm 119:9-12 “How can a young man keep his behavior pure? By guarding it in accordance with your word. I have sought you with all of my heart; do not let me drift away from your commands. I have stored what you have said in my heart, so I won’t sin against you. Blessed are you, LORD! Teach me your statutes.”
+When we deal with our sin and our heart, God listens to our prayers and acts on our behalf. Leaving things unresolved makes it difficult for us to be honest, let down and vulnerable, causing our prayers to be distracted or not genuine.
 
-Psalm 37:31 “The law of his God is in his heart, and his steps shall not be supplanted.”
+Prayer is a perfect opportunity to explore our hearts, share everything with God and begin relieving ourselves of guilt and other emotions that may be weighing us down. Doing this will attract God and allow him to work in our lives.
 
-Psalm 40:7-8 “Then I said, “Look, I have come. As is written about me in the Scriptures: I take joy in doing your will, my God, for your instructions are written on my heart.”</p>
-                                                    </div>
-             <footer>
-            <p class="small tm-copyright-text"><a href="contact me.html">Contact Me</a>|<a href="Help.html">Help</a> | <a href="Privacy.html">Privacy</a> <br> Copyright &copy; <span class="tm-current-year">2020</span> UGI & BUCCI. ALL RIGHTS RESERVED</p>
-         </footer>
-<body/>
+Prayer initiates angelic action on our behalf. This is a concept that can be difficult for us to grasp if we are out of practice seeing the world through a spiritual lens.
+
+The fact of the matter is that the Bible talks about spiritual battles taking place on a daily basis, and it’s our choice if we want to start believing that our prayers create activity in the spiritual realm and influence the physical realm.</p>
+    </div>
+    
+  </div>
+  
+</div>
+</div>
+
+<footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>UGI & BUCCI</strong>. All Rights Reserved
+          </div>
+            <div class="links">
+            
+             <a href="contact me.html">Contact Me</a> |<a href="Help.html">Help</a> |<a href="Privacy.html">Privacy</a>|
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Imperial
+            -->
+             <a href="https://facebook.com/">Facebook</a> |<a href="https://instagram.com/">Instagram</a> |<a href="https://Twitter.com/">Twitter</a> |
+          </div>
+          <div class="address">
+            
+            <strong>Galana Plaza, Galana Road off Argwings Kodhek, Nairobi </strong>   
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Required JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/morphext/morphext.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/stickyjs/sticky.js"></script>
+  <script src="lib/easing/easing.js"></script>
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="js/custom.js"></script>
+
+  <script src="contactform/contactform.js"></script>
+</div>
+</body>
 </html>
